@@ -1,20 +1,22 @@
 -install python,glob,numpy and opencv2.
--copy the IIVProject folder to the desired location
-	the folder contains two subfolders called jaffe4 and jaffe2
 	
-	jaffe4 contains the 210 images seperated into 7 folders as per the emotions.It also contains a folder called testing where the images 		of one of the test subjects for all the emotions are placed into seperate folders.
+-jaffe4 contains the 210 images seperated into 7 folders as per the emotions.It also contains a folder called testing where the images 		of one of the test subjects for all the emotions are placed into seperate folders.
 	
-	jaffe2 contains the images that are obtained after running the python file test.py.this python file is used to perform preprocessing on 	training images
+-jaffe2 contains the images that are obtained after running the python file test.py.this python file is used to perform preprocessing on 	training images
 	
--the project folder contains three python code files namely test.py(preprocessing) test3.py(used to obtain histograms) test5.py(testing)
-	to make sure that the codes run you have to change the address as per the location of the IIVProject folder
+-Project contains three python code files namely test.py(preprocessing) test3.py(used to obtain histograms) test5.py(testing)
+
+-To make sure that the codes run you have to change the address as per the location of the folder
 	in test.py make changes in lines 23 and 29
 	in test3.py make  changes in lines 28 and 68
 	in test5.py make changes in lines 41 and 82
+	
 -on running test.py the images in jaffe4 are preprocessed and copied in jaffe2 in respective folders after performing gamma-correction and 
  difference of gaussian filtering
+ 
 -on running test3.py the images in jaffe2 are used to create the respective lbp concatenated histograms for each class which are saved in 
  jaffe2 by the name hist1.txt.npy in the respective folders.
+ 
 -on running test5.py an accuracy test is performed on images present in the testing folder present in jaffe4 using kullback-leibler divergence
  with some slight modifications of our own.the actual and the expected class of all the images are printed with a accuracy in percent at the 
  end.
